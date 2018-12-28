@@ -1,0 +1,38 @@
+{
+  "name": "proxio",
+  "version": "0.0.0",
+  "description": "Detect object changes with es6 proxy",
+  "main": "index.js",
+  "scripts": {
+    "preversion": "npm run-script test && npm run-script build && echo git commit -a -m BUILD",
+    "postversion": "npm publish && git push --follow-tags",
+    "release:major": "npm version major",
+    "release:minor": "npm version minor",
+    "release:patch": "npm version patch",
+    "build": "parcel build index.js --no-cache --no-source-maps --global Proxio",
+    "test": "mocha test"
+  },
+  "keywords": [
+    "proxy",
+    "es6",
+    "observable",
+    "changes",
+    "object"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioricali/proxio.git"
+  },
+  "author": "Fabio Ricali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabioricali/proxio/issues"
+  },
+  "homepage": "https://github.com/fabioricali/proxio#readme",
+  "devDependencies": {
+    "jsdom": "^13.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "parcel-bundler": "^1.11.0"
+  }
+}
