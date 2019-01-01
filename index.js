@@ -16,10 +16,10 @@ module.exports = (object, onChange) => {
     const handler = {
         get(target, property, receiver) {
             let result;
+            console.log('-------', property);
             try {
                 result = new Proxy(target[property], handler);
             } catch (_) {
-                console.error(_);
                 result = Reflect.get(target, property, receiver);
             }
             return result;

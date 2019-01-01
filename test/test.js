@@ -4,12 +4,12 @@ describe('proxio', function () {
     it('should be ok', function () {
         const myObj = {};
         const myProxy = proxio(myObj, (changes) => {
-            console.log('change', changes)
+            //console.log('change', changes)
         });
         myProxy.myProp = {a: 1};
 
-        console.log(myProxy.myProp);
+        console.log(myProxy);
 
-        myProxy.myProp.a = 2;
+        //myProxy.myProp.a = 2;
     })
 });
