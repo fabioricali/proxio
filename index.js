@@ -1,4 +1,5 @@
 "use strict";
+
 /**
  * Simple utility function to add a new property to an existing object path.  Examples:
  *
