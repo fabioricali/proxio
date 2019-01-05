@@ -1,6 +1,6 @@
 {
   "name": "proxio",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Detect object changes with es6 proxy",
   "main": "dist/index.js",
   "scripts": {
